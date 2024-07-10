@@ -226,7 +226,7 @@ def train(a1, a2, a3, a4, a5, k1, k2, k3, k4, k5):
             RMSE5_list.append(MSE5)
             # 每步的奖励划分
 
-            reward = -0.1 * ((k1-HR1)*MSE1 + (k2-HR2)*MSE2 + (k3-HR3)*MSE3 + (k4-HR4)*MSE4 + (0.5)*MSE5)
+            reward = -0.1 * ((k1-HR1)*MSE1 + (k2-HR2)*MSE2 + (k3-HR3)*MSE3 + (k4-HR4)*MSE4 + (k5-HR5)*MSE5)
             # reward = -MSE_mean
             self.MSE += MSE_mean
             self.HR += 1/5 * (HR1 + HR2 + HR3 + HR4 + HR5)
